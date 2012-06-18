@@ -3,14 +3,14 @@ package com.abe.API.model;
 import java.util.List;
 
 public class MessageWrapper {
-	private List<MessageIn> messageIn;
+	private List<MessageIn> message;
 
 	public void setMessageIn(List<MessageIn> messageIn) {
-		this.messageIn = messageIn;
+		this.message = messageIn;
 	}
 
 	public List<MessageIn> getMessageIn() {
-		return messageIn;
+		return message;
 	}
 
 }

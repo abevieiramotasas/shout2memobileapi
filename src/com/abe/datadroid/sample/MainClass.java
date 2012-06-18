@@ -25,6 +25,9 @@ public class MainClass {
 		MessageWrapper mw = new MessageWrapper();
 		mw.setMessageIn(messages);
 		String json = JSONUtil.toJSON(mw);
+
+		json = "{\"message\":[{\"author_id\":\"14002\",\"author_name\":\"saulo dev\",\"date_in_millis\":\"1339475083513\",\"destination_id\":\"10001\",\"message_id\":\"9001\",\"text\":\"adfafs\",\"topic\":\"fhuiaheufe\"},{\"author_id\":\"9001\",\"author_name\":\"Abelardo\",\"date_in_millis\":\"1339181877528\",\"destination_id\":\"10001\",\"message_id\":\"8001\",\"text\":\"Testando as Mensagens\",\"topic\":\"Topico ou tags\"},{\"author_id\":\"9001\",\"author_name\":\"Abelardo\",\"date_in_millis\":\"1339181875981\",\"destination_id\":\"10001\",\"message_id\":\"7001\",\"text\":\"Testando as Mensagens\",\"topic\":\"Topico ou tags\"},{\"author_id\":\"9001\",\"author_name\":\"Abelardo\",\"date_in_millis\":\"1339181874261\",\"destination_id\":\"10001\",\"message_id\":\"6001\",\"text\":\"Testando as Mensagens\",\"topic\":\"Topico ou tags\"},{\"author_id\":\"9001\",\"author_name\":\"Abelardo\",\"date_in_millis\":\"1339181872503\",\"destination_id\":\"10001\",\"message_id\":\"5001\",\"text\":\"Testando as Mensagens\",\"topic\":\"Topico ou tags\"},{\"author_id\":\"9001\",\"author_name\":\"Abelardo\",\"date_in_millis\":\"1339181869234\",\"destination_id\":\"10001\",\"message_id\":\"4001\",\"text\":\"Testando as Mensagens\",\"topic\":\"Topico ou tags\"}]}";
+
 		List<MessageIn> resultado = (JSONUtil.fromJSON(json,
 				MessageWrapper.class)).getMessageIn();
 		// fim teste

@@ -31,7 +31,7 @@ public class Shout2Me {
 		params.put("latitude", String.valueOf(latitude));
 		params.put("distance", String.valueOf(distance));
 		params.put("max_results", String.valueOf(max_results));
-		String result = RestUtil.makeSimpleGet(params, "island/getAll");
+		String result = RestUtil.makeSimpleGet(params, "island/getall");
 		List<IslandIn> islands = JSONUtil.fromJSON(result, IslandWrapper.class)
 				.getIslands();
 		return islands;
@@ -70,7 +70,7 @@ public class Shout2Me {
 		params.put("base_date_in_millis", String.valueOf(base_date_in_millis));
 		params.put("up", String.valueOf(up));
 
-		String result = RestUtil.makeSimpleGet(params, "message/getAll");
+		String result = RestUtil.makeSimpleGet(params, "message/getall");
 		List<MessageIn> messages = JSONUtil.fromJSON(result,
 				MessageWrapper.class).getMessageIn();
 		return messages;

@@ -59,6 +59,18 @@ public class Shout2Me {
 		return RestUtil.makeSimplePost(u.getAttributesAsMap(), "user/create");
 	}
 
+	/**
+	 * 
+	 * @param destination_id
+	 * @param limit
+	 * @param base_date_in_millis
+	 * @param up
+	 * @return
+	 * @throws IllegalStateException
+	 * @throws IOException
+	 * @throws URISyntaxException
+	 * @throws RestClientException
+	 */
 	public static List<MessageIn> getAllMessageByIsland(Long destination_id,
 			Integer limit, Long base_date_in_millis, Boolean up)
 			throws IllegalStateException, IOException, URISyntaxException,

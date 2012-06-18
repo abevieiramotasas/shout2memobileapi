@@ -13,6 +13,7 @@ public class MainClass {
 
 	public static void main(String[] args) {
 
+		// testando gson
 		List<MessageIn> messages = new ArrayList<MessageIn>();
 		MessageIn m = null;
 		for (int i = 0; i < 10; i++) {
@@ -26,6 +27,7 @@ public class MainClass {
 		String json = JSONUtil.toJSON(mw);
 		List<MessageIn> resultado = (JSONUtil.fromJSON(json,
 				MessageWrapper.class)).getMessageIn();
+		// fim teste
 
 		List<IslandIn> islands = null;
 		try {

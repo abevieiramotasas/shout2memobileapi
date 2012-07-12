@@ -13,16 +13,16 @@ import com.abe.API.model.MessageWrapper;
 import com.abe.API.model.User;
 import com.abe.datadroid.util.JSONUtil;
 import com.abe.datadroid.util.RestUtil;
-import com.abe.datadroid.util.RestUtilJersey;
+import com.abe.datadroid.util.RestUtilGson;
 
 public class Shout2Me {
 
 	@SuppressWarnings("unused")
 	private static String developerKey = "";
-	public static final String REMOTE_PATH = "http://shout2megae.appspot.com/";
-	public static final String PATH = "http://localhost:8888/";
+	public static final String PATH = "http://shout2megae.appspot.com/";
+	public static final String LOCAL_PATH = "http://localhost:8888/";
 
-	private static RestUtil restUtil = new RestUtilJersey();
+	private static RestUtil restUtil = new RestUtilGson();
 
 	public static List<IslandIn> getIslands(Double longitude, Double latitude,
 			Double distance, Integer max_results) throws Exception {
